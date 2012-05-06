@@ -4,7 +4,11 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="7" />
+    <!--
+        Requires a minimum platform version of Android-3 (SDK 1.5) to run
+    -->
+    <uses-sdk android:minSdkVersion="3"
+      android:targetSdkVersion="11"/>
 
     <application
         android:icon="@drawable/ic_launcher"

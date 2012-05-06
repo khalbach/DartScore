@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dart Score</string>
-    <string name="players_prompt">Please select the number of players..</string>
-    <string-array name="numPlayers_array">
+    <string name="app_name">DartScore</string>
+    <string name="start_game_button_text">Start Game</string>
+    <string name="player_count_prompt">Select the number of players</string>
+    <string-array name="PlayerCounts">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
     </string-array>
-    <string name="start_game">Start Game</string>
-    <string name="game_name">Cutthroat Cricket</string>
-
 </resources>

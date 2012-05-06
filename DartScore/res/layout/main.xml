@@ -4,29 +4,28 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
+   	<TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
-        android:text="@string/players_prompt" />
+        android:text="@string/player_count_prompt" />
 
-    <Spinner
-        android:id="@+id/numPlayers"
-        android:layout_width="fill_parent"
+    <Spinner 
+        android:id="@+id/PlayerCountSpinner"
         android:layout_height="wrap_content"
-        android:prompt="@string/players_prompt" />
+        android:layout_width="fill_parent"
+        android:prompt = "@string/player_count_prompt">
+    </Spinner>
 
     <TableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/playerNames"
+        android:id="@+id/PlayerNamesTableLayout"
         android:layout_width="fill_parent"
-        android:layout_height="242dp"
-        android:layout_weight="0.77" />
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/startGame"
+        android:id="@+id/StartGameButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_game" />
+        android:text="@string/start_game_button_text" />
 
 </LinearLayout>
