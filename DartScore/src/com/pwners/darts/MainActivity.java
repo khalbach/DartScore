@@ -1,4 +1,4 @@
-package com.cricket.cutthroat;
+package com.pwners.darts;
 
 import android.app.Activity;
 import android.content.Context;
@@ -62,6 +62,8 @@ public class MainActivity extends Activity {
 
     public static final String SELECTION_MARKER =
             SELECTION_KEY + PROPERTY_DELIMITER;
+    
+    public static final int CUTTHROAT_CRICKET_KEY = 1;
 
     /**
      * Initializes the application and the activity.
@@ -92,7 +94,7 @@ public class MainActivity extends Activity {
          * player counts. The list is defined by XML in the strings.xml file.
          */
         this.mAdapter = ArrayAdapter.createFromResource(this, R.array.PlayerCounts,
-                android.R.layout.simple_spinner_dropdown_item);
+                android.R.layout.simple_dropdown_item_1line);
 
         /*
          * Attach the mLocalAdapter to the spinner.
@@ -129,8 +131,8 @@ public class MainActivity extends Activity {
 	    	
 	    	// Start game activity
 	    	Intent myGame = new Intent(getApplicationContext(), GameActivity.class);
+	    	myGame.putExtra(GameActivity.GAME_NAME_KEY, CUTTHROAT_CRICKET_KEY);
 	    	myGame.putExtra(GameActivity.PLAYER_NAMES_KEY, playerNames);
-	    	myGame.putExtra(GameActivity.NUM_PLAYERS_KEY, numPlayers);
 	    	// TODO: add game type once we make this into a boss app
 	        startActivity(myGame);
 	    }
