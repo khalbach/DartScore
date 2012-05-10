@@ -4,6 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+/**
+ * Creates specified game and control high level game
+ * processing logic.
+ * 
+ * @author halbachk
+ *
+ */
 public class GameActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
@@ -16,18 +23,21 @@ public class GameActivity extends Activity {
        
         switch (gameType){
         	case MainActivity.CUTTHROAT_CRICKET_KEY: 
-        		set_gameName(new CutthroatCricket(this, playerNames));
+        		m_game = new CutthroatCricket(this, playerNames);
         		break;
+        		//TODO: add more games
         }
         
+        // create board for specified game
+        m_game.createBoard();
     }
 
-	public IDartsGame get_gameName() {
-		return m_game;
-	}
-
-	public void set_gameName(IDartsGame game) {
-		m_game = game;
+    /**
+     * 
+     * @return game name
+     */
+	public String get_gameName() {
+		return m_game.getGameName();
 	}
 
 	public static final String GAME_NAME_KEY = "1";

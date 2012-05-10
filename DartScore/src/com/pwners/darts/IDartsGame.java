@@ -7,19 +7,34 @@ package com.pwners.darts;
  */
 public interface IDartsGame {
 	
-	// game to create
+	/**
+	 * Create game board
+	 */
 	public void createBoard();
 	
-	// processes a dart
-	public void processDart(Player player, int dartScore);
+	/**
+	 * Processes a dart throw
+	 * @param player player who threw dart
+	 * @param dartThrow throw value
+	 */
+	public void processDartThrow(Player player, DartThrow dartThrow);
 	
-	// updates specified players score
-	public void updateScore(Player player, int points);
+	/**
+	 * Undo the previous dart throw
+	 */
+	public void undoDartThrow();	
 	
-	// tests to see if a player has won the game
+	/**
+	 * Tests to see if player has won the game
+	 * @param player player who threw dart
+	 * @return true if player won
+	 */
 	public boolean isGameOver(Player player);
 	
-	// returns name of the game
+	/**
+	 * Get name of game
+	 * @return name of game
+	 */
 	public String getGameName();
 	
 }

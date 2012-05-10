@@ -12,8 +12,14 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+/**
+ * Cutthroat Cricket Darts Game
+ * @author halbachk
+ *
+ */
 public class CutthroatCricket implements IDartsGame {
 	
+	/* Number of cricket marks */
 	private final int NUM_CRICKET_MARKS = 7;
     
 	/* number of players */
@@ -36,6 +42,8 @@ public class CutthroatCricket implements IDartsGame {
     		R.drawable.three_marks,
     		};
     
+    private final String[] MARKS = {"20","19","18","17","16","15","B"};
+    
     /**
      * Set data member variables and create board
      * 
@@ -47,9 +55,12 @@ public class CutthroatCricket implements IDartsGame {
     	m_playersNames = playersNames;
     	m_currMarks = new int[NUM_CRICKET_MARKS*m_numPlayers];
     	m_activity = activity;
-    	createBoard();
     }
 
+    /*
+     * (non-Javadoc)
+     * @see com.pwners.darts.IDartsGame#createBoard()
+     */
 	public void createBoard() {
 
 		// Update the current view
@@ -85,8 +96,6 @@ public class CutthroatCricket implements IDartsGame {
 
         // Add the TableRow to the TableLayout
         sb.addView(namesTableRow);
-        
-        final String[] MARKS = {"20","19","18","17","16","15","B"};
         
         // Add each row of marks to board
         for(int j = 0; j < MARKS.length; j++){
@@ -134,24 +143,40 @@ public class CutthroatCricket implements IDartsGame {
 		
 	}
 
-	public void processDart(Player player, int dartScore) {
+	/*
+	 * (non-Javadoc)
+	 * @see com.pwners.darts.IDartsGame#processDart(com.pwners.darts.Player, com.pwners.darts.DartThrow)
+	 */
+	public void processDartThrow(Player player, DartThrow dartThrow) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateScore(Player player, int points) {
+	/*
+	 * (non-Javadoc)
+	 * @see com.pwners.darts.IDartsGame#undoDartThrow()
+	 */
+	public void undoDartThrow() {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.pwners.darts.IDartsGame#isGameOver(com.pwners.darts.Player)
+	 */
 	public boolean isGameOver(Player player) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.pwners.darts.IDartsGame#getGameName()
+	 */
 	public String getGameName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Cutthroat Cricket";
 	}
 
 }
