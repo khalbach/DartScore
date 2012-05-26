@@ -9,8 +9,9 @@ public interface IDartsGame {
 	
 	/**
 	 * Create game board
+	 * @param scoreboard layout
 	 */
-	public void createBoard();
+	public void createBoard(int scoreboard);
 	
 	/**
 	 * Processes a dart throw

@@ -1,12 +1,17 @@
 package com.pwners.darts;
 
+import java.util.Stack;
+
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -33,6 +38,9 @@ public class CutthroatCricket implements IDartsGame {
     
     /* this activity */
     private Activity m_activity;
+    
+    /* Array of all dart throws */
+    Stack<DartThrow> allDartThrows = new Stack<DartThrow>();
     
     /* images to rotate between */
     private final int[] marksImg = {
@@ -61,10 +69,9 @@ public class CutthroatCricket implements IDartsGame {
      * (non-Javadoc)
      * @see com.pwners.darts.IDartsGame#createBoard()
      */
-	public void createBoard() {
+	public void createBoard(int scoreboard) {
 
 		// Update the current view
-		m_activity.setContentView(R.layout.cutthroat_cricket);
 		Context c = m_activity.getApplicationContext();
 		final Resources res = m_activity.getResources();
 		
@@ -148,8 +155,13 @@ public class CutthroatCricket implements IDartsGame {
 	 * @see com.pwners.darts.IDartsGame#processDart(com.pwners.darts.Player, com.pwners.darts.DartThrow)
 	 */
 	public void processDartThrow(Player player, DartThrow dartThrow) {
-		// TODO Auto-generated method stub
-		
+		final Resources res = m_activity.getResources();
+		int id = 1;
+    	Bitmap bmp=BitmapFactory.decodeResource(res, marksImg[++m_currMarks[id] % 4]);
+        Bitmap resizedbitmap=Bitmap.createScaledBitmap(bmp, 100, 100, true);
+        ImageView v = (ImageView)m_activity.findViewById(1);
+        v.setImageBitmap(resizedbitmap);
+		allDartThrows.push(dartThrow);
 	}
 
 	/*
@@ -157,8 +169,11 @@ public class CutthroatCricket implements IDartsGame {
 	 * @see com.pwners.darts.IDartsGame#undoDartThrow()
 	 */
 	public void undoDartThrow() {
-		// TODO Auto-generated method stub
 		
+		if(allDartThrows.size() == 0)
+			return;
+		
+		DartThrow lastThrow = allDartThrows.pop();
 	}
 
 	/*

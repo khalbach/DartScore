@@ -1,0 +1,182 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              >
+
+    <TableRow>
+        <TextView
+	        android:id="@+id/twenty"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/twenty" />
+	    <Button
+	        android:id="@+id/twentyx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles"
+	        android:onClick="updateSummary" />
+	    <Button
+	        android:id="@+id/twentyx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/twentyx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/nineteen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/nineteen" />
+	    <Button
+	        android:id="@+id/nineteenx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/nineteenx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/nineteenx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/eighteen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/eighteen" />
+	    <Button
+	        android:id="@+id/eighteenx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/eighteenx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/eighteenx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/seventeen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/seventeen" />
+	    <Button
+	        android:id="@+id/seventeenx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/seventeenx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/seventeenx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/sixteen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/sixteen" />
+	    <Button
+	        android:id="@+id/sixteenx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/sixteenx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/sixteenx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/fifteen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/fifteen" />
+	    <Button
+	        android:id="@+id/fifteenx1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/fifteenx2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	    <Button
+	        android:id="@+id/fifteenx3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/triples" />
+	</TableRow>
+	
+    <TableRow>
+        <TextView
+	        android:id="@+id/bullseye"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/bullseye"
+	        />
+	    <Button
+	        android:id="@+id/bullseyex1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/singles" />
+	    <Button
+	        android:id="@+id/bullseyex2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/doubles" />
+	</TableRow>
+	
+    <TableRow
+        android:id="@+id/summaryLine">
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/summary" />
+        
+    </TableRow>
+    
+    <Button
+	        android:id="@+id/updateScore"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/enter" />
+
+</TableLayout>

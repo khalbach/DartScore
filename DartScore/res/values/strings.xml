@@ -9,4 +9,17 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    <string name="enterScore">Enter Score</string>
+    <string name="twenty">20</string>
+    <string name="nineteen">19</string>
+    <string name="eighteen">18</string>
+    <string name="seventeen">17</string>
+    <string name="sixteen">16</string>
+    <string name="fifteen">15</string>
+    <string name="bullseye">B</string>
+    <string name="singles">x1</string>
+    <string name="doubles">x2</string>
+    <string name="triples">x3</string>
+    <string name="summary">Summary: </string>
+    <string name="enter">Enter</string>
 </resources>
